@@ -1,11 +1,12 @@
 package com.example.smartkhet_1
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class CropsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class CropsActivity : AppCompatActivity() {
         setupCrop(R.id.crop2, "Tomato (Hybrid)", "Greenhouse B", "Needs Water", 70, 90)
         setupCrop(R.id.crop3, "Corn (Maize)", "East Field • Sector 2", "Healthy", 20, 100)
 
-        val bottomNav = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_nav)
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
 
         // Force "Crops" to be the selected (Green) item
         bottomNav.selectedItemId = R.id.nav_crops
@@ -28,16 +29,23 @@ class CropsActivity : AppCompatActivity() {
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    finish() // Go back to Home Screen
-                    overridePendingTransition(0, 0) // Optional: Makes it instant/smooth
+                    // Go to Home
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
                     true
                 }
                 R.id.nav_crops -> true // Already here, do nothing
+                R.id.nav_sensors -> {
+                    // Go to Sensors
+                    val intent = Intent(this, SensorsActivity::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    true
+                }
                 else -> false
             }
         }
-
-
     }
 
     private fun setupCrop(cardId: Int, name: String, loc: String, status: String, day: Int, totalDays: Int) {

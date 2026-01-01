@@ -33,4 +33,18 @@ object MockBackend {
             Crop(3, "Corn (Maize)", "East Field • Sector 2", "Healthy", 20, 100, 72)
         )
     }
+
+    // --- API 4: Get Real-time Sensor Data ---
+    fun getSensorReadings(): SensorData {
+        return SensorData(
+            moisture = 65,       // 65%
+            temp = 31.5f,        // 31.5 Celsius
+            ph = 6.8f,           // pH Level
+            nitrogen = 80,       // N level
+            phosphorus = 60,     // P level
+            potassium = 40       // K level
+        )
+    }
+
+
 }

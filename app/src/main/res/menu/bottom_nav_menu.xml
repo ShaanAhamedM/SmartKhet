@@ -1,6 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/nav_home" android:title="Home" android:icon="@android:drawable/ic_menu_today" />
-    <item android:id="@+id/nav_crops" android:title="Crops" android:icon="@android:drawable/ic_menu_gallery" />
-    <item android:id="@+id/nav_sensors" android:title="Sensors" android:icon="@android:drawable/ic_menu_compass" />
-    <item android:id="@+id/nav_community" android:title="Community" android:icon="@android:drawable/ic_menu_share" />
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_crops"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="Crops" />
+
+    <item
+        android:id="@+id/nav_sensors"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Sensors" />
+
+    <item
+        android:id="@+id/nav_community"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="Community" />
+
 </menu>

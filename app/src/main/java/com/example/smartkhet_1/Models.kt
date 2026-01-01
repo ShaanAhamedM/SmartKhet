@@ -29,3 +29,13 @@ data class FarmHealth(
     val waterEfficiency: String,
     val carbonFootprint: String
 )
+
+// 4. Data model for Sensor Readings
+data class SensorData(
+    val moisture: Int,
+    val temp: Float,
+    val ph: Float,
+    val nitrogen: Int,
+    val phosphorus: Int,
+    val potassium: Int
+)
