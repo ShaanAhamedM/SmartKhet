@@ -99,6 +99,12 @@ class MainActivity : AppCompatActivity() {
                     overridePendingTransition(0, 0)
                     true
                 }
+                R.id.nav_community -> {
+                    val intent = android.content.Intent(this, CommunityActivity::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    true
+                }
                 else -> false
             }
         }

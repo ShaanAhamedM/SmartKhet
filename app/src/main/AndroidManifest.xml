@@ -38,6 +38,8 @@
             android:name=".SensorsActivity"
             android:exported="false" />
 
+        <activity android:name=".CommunityActivity" />
+
     </application>
 
 </manifest>

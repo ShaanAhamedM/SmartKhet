@@ -49,6 +49,11 @@ class SensorsActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_sensors -> true // Already here, do nothing
+                R.id.nav_community -> {
+                    startActivity(Intent(this, CommunityActivity::class.java))
+                    overridePendingTransition(0, 0)
+                    true
+                }
                 else -> false
             }
         }
