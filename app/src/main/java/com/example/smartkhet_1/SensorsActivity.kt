@@ -1,3 +1,5 @@
+// Sensors Code
+
 package com.example.smartkhet_1
 
 import android.Manifest
