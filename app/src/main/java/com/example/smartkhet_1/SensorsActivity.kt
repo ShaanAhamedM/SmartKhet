@@ -211,6 +211,8 @@ class SensorsActivity : AppCompatActivity() {
         }
     }
 
+
+
     override fun onDestroy() {
         super.onDestroy()
         isConnected = false
